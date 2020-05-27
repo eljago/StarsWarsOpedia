@@ -27,6 +27,7 @@
 /// THE SOFTWARE.
 
 import UIKit
+import Alamofire
 
 class MainTableViewController: UITableViewController {
   @IBOutlet weak var searchBar: UISearchBar!
@@ -34,6 +35,8 @@ class MainTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     searchBar.delegate = self
+    
+    fetchFilms()
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,5 +66,16 @@ extension MainTableViewController: UISearchBarDelegate {
   }
   
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+  }
+}
+
+extension MainTableViewController {
+  func fetchFilms() {
+    // 1
+    let request = AF.request("https://swapi.dev/api/films")
+    // 2
+    request.responseJSON { (data) in
+      print(data)
+    }
   }
 }
