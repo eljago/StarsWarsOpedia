@@ -74,8 +74,9 @@ extension MainTableViewController {
     // 1
     let request = AF.request("https://swapi.dev/api/films")
     // 2
-    request.responseJSON { (data) in
-      print(data)
+    request.responseDecodable(of: Films.self) { (response) in
+      guard let films = response.value else { return }
+      print(films.all[0].title)
     }
   }
 }
