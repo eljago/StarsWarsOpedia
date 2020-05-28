@@ -13,6 +13,7 @@
 		D267B3B0247F245C004762D8 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = D267B3AF247F245C004762D8 /* Film.swift */; };
 		D267B3B2247F25BD004762D8 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = D267B3B1247F25BD004762D8 /* Films.swift */; };
 		D2746A2924805C70004BA390 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2746A2824805C70004BA390 /* Starship.swift */; };
+		D2746A2B2480674E004BA390 /* Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2746A2A2480674E004BA390 /* Starships.swift */; };
 		D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Main.storyboard */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
 		E087AAD623620D0900D1E33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E087AAD523620D0800D1E33E /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		D267B3AF247F245C004762D8 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		D267B3B1247F25BD004762D8 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 		D2746A2824805C70004BA390 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		D2746A2A2480674E004BA390 /* Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starships.swift; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* StarWarsOpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsOpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F2081F4A9144005CD714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				D267B3AF247F245C004762D8 /* Film.swift */,
 				D267B3B1247F25BD004762D8 /* Films.swift */,
 				D2746A2824805C70004BA390 /* Starship.swift */,
+				D2746A2A2480674E004BA390 /* Starships.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				D267B3B2247F25BD004762D8 /* Films.swift in Sources */,
 				D267B3B0247F245C004762D8 /* Film.swift in Sources */,
 				E087AADA23620E3B00D1E33E /* MainTableViewController.swift in Sources */,
+				D2746A2B2480674E004BA390 /* Starships.swift in Sources */,
 				183D953D23DF5A4700845F5F /* Displayable.swift in Sources */,
 				E087AAD923620E3B00D1E33E /* DetailViewController.swift in Sources */,
 			);
@@ -319,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -372,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -387,13 +391,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 96UFPDZ6ZM;
 				INFOPLIST_FILE = "$(SRCROOT)/StarWarsOpedia/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.starwarsopedia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jagochile.starwarsopedia;
 				PRODUCT_NAME = StarWarsOpedia;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -407,13 +412,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 96UFPDZ6ZM;
 				INFOPLIST_FILE = "$(SRCROOT)/StarWarsOpedia/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.starwarsopedia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jagochile.starwarsopedia;
 				PRODUCT_NAME = StarWarsOpedia;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

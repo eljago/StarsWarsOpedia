@@ -34,6 +34,7 @@ class MainTableViewController: UITableViewController {
   
   var items: [Displayable] = []
   var selectedItem: Displayable?
+  var films: [Film] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -70,9 +71,15 @@ class MainTableViewController: UITableViewController {
 // MARK: - UISearchBarDelegate
 extension MainTableViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    guard let shipName = searchBar.text else { return }
+    searchStarships(for: shipName)
   }
   
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    searchBar.text = nil
+    searchBar.resignFirstResponder()
+    items = films
+    tableView.reloadData()
   }
 }
 
@@ -83,8 +90,23 @@ extension MainTableViewController {
     .responseDecodable(of: Films.self) { (response) in
       guard let films = response.value else { return }
       
+      self.films = films.all
+      
       self.items = films.all
       self.tableView.reloadData()
+    }
+  }
+  
+  func searchStarships(for name: String) {
+    let url = "https://swapi.dev/api/starships"
+    let parameters: [String: String] = ["search": name]
+    
+    AF.request(url, parameters: parameters)
+      .validate()
+      .responseDecodable(of: Starships.self) { response in
+        guard let starships = response.value else { return }
+        self.items = starships.all
+        self.tableView.reloadData()
     }
   }
 }
